@@ -1,0 +1,67 @@
+.TextSection {
+	overflow: hidden;
+	display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20
+	flex-direction: column;
+	width: 40vw;
+	padding-top: 10vh;
+}
+
+.Title {
+	padding: 5vh 0;
+}
+
+.Content {
+	//color: white;
+}
+
+@keyframes right {
+  100% {
+    transform: translateX(0%);
+    color: #6b6b6b;
+  }
+}
+
+@keyframes left {
+  100% {
+    transform: translateX(-115%);
+    color: #6b6b6b;
+  }
+}
+
+.Experience {
+	padding-bottom: 10vh;
+	visibility: visible;
+	animation: left 2s;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+.ExperienceScrolled {
+	animation: right 2s;
+	animation-delay: 0.2s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transform: translateX(-115%);
+	visibility: visible;
+}
+
+.Invisible {
+	visibility: hidden;
+}
+
+
+
+.WithDate {
+	display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20
+	flex-direction: row;
+	align-items: baseline;
+
+	h2 {
+		padding-right: 1vw;
+	}
+}

@@ -1,0 +1,185 @@
+$primary: #37ca7e;
+$secondary: #43a6dd;
+$transitionSpeed: 1s;
+
+
+.Nav {
+	padding: 0 2vw;
+  display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20
+
+	flex-direction: row;
+	align-items: baseline;
+	font-size: 20px;
+	top: 0;
+
+	position: sticky;
+  position: -webkit-sticky;
+
+	background: rgba(#000, 0.5);
+
+	border: none;
+
+	a {
+		background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 2px;
+	  color: #fff;
+	  text-decoration: none;
+	  transition: background-size .2s;
+	}
+
+	a:link {
+
+	}
+
+	a:visited {
+		
+	}
+
+	a:hover {
+		background-size: 40px 50px;
+	}
+
+	a:active {
+		
+	}
+
+	li {
+		display: inline-block;
+		padding: 0 1vw;
+		color: white;
+	}
+
+	h1 {
+		color: white;
+	}
+
+	/* Mobile Styles */
+	@media only screen and (max-width: 400px) {
+	  flex-flow: column;
+	}
+
+	/* Tablet Styles */
+	@media only screen and (min-width: 401px) and (max-width: 960px) {
+    flex-flow: column;
+    align-content: center;
+	}
+
+	/* Desktop Styles */
+	@media only screen and (min-width: 961px) {
+	}
+
+	-webkit-transition: all $transitionSpeed;
+	-moz-transition: all $transitionSpeed;
+	-ms-transition: all $transitionSpeed;
+	-o-transition: all $transitionSpeed;
+	transition: all $transitionSpeed;
+	
+}
+
+
+.Scrolled {
+
+	font-size: 18px;
+	top: 0; /* required */
+	background: transparent;
+	padding: 
+	2vh 4vw;
+
+	a {
+		text-decoration: none;
+		color: #6b6b6b;
+		border-bottom: 2px solid transparent;
+	}
+
+	li {
+		color: #6b6b6b;
+	}
+
+	h1 {
+		color: #6b6b6b;
+	}
+
+	-webkit-transition: all $transitionSpeed;
+	-moz-transition: all $transitionSpeed;
+	-ms-transition: all $transitionSpeed;
+	-o-transition: all $transitionSpeed;
+	transition: all $transitionSpeed;
+	
+}
+
+.NavLinks {
+	position: relative;
+	
+	display: -ms-flexbox;      // TWEENER - IE 10
+  display: -webkit-flex;     // NEW - Chrome
+  display: flex;             // NEW, Spec - Opera 12.1, Firefox 20
+
+	flex-flow: row wrap;
+	justify-content: space-between;
+	flex-grow: 1;
+
+	width: 100%;
+
+
+	/* Mobile Styles */
+	@media only screen and (max-width: 400px) {
+		flex-direction: column;
+		width: 60%;
+	}
+
+	/* Tablet Styles */
+	@media only screen and (min-width: 401px) and (max-width: 960px) {
+		width: 80%;
+	}
+
+		/* Desktop Styles */
+	@media only screen and (min-width: 961px) {
+		padding-right: 20vw;
+		padding-left: 10vw;
+	}
+
+}
+
+.NavIcons {
+	flex-shrink: 0;
+	position: relative;
+	font-size: 25px;
+	padding: 0;
+
+		/* Mobile Styles */
+	@media only screen and (max-width: 400px) {
+	}
+
+	/* Tablet Styles */
+	@media only screen and (min-width: 401px) and (max-width: 960px) {
+	}
+
+		/* Desktop Styles */
+	@media only screen and (min-width: 961px) {
+		padding-right: 5vw;
+	}
+}
+
+@keyframes up {
+  100% {
+    transform: translateY(0%);
+  }	
+}
+
+.navTitleBox {
+	flex-shrink: 0;
+	overflow: hidden;
+}
+
+.navTitle {
+	font-size: 36px;
+	animation: up 0.8s;
+	animation-delay: 0.6s;
+	animation-fill-mode: forwards;
+	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
+	transform: translateY(115%);
+}

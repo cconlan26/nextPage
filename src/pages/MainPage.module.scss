@@ -1,0 +1,23 @@
+.MainPage {
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+	padding-bottom: 400vh;
+	
+	/* Mobile Styles */
+	@media only screen and (max-width: 400px) {
+
+	}
+
+	/* Tablet Styles */
+	@media only screen and (min-width: 401px) and (max-width: 960px) {
+
+	}
+
+	/* Desktop Styles */
+	@media only screen and (min-width: 961px) {
+
+	}
+}
