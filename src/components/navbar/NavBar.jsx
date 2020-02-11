@@ -7,9 +7,10 @@ export interface NavLink {
   text: string
 }
 
-export interface IconPair {
+export interface Icon {
   type: string,
-  icon: string
+  icon: string,
+  url: url
 }
 
 export const HEADERS: NavLink[] = [
@@ -31,18 +32,21 @@ export const HEADERS: NavLink[] = [
   }
 ]
 
-export const ICONS: IconPair[] = [
- {
+export const ICONS: Icon[] = [
+  {
     type: 'fab',
-    icon: 'github'
+    icon: 'linkedin',
+    url: 'https://www.linkedin.com/in/christopher-conlan/'
   },
   {
     type: 'fab',
-    icon: 'linkedin'
+    icon: 'github',
+    url: 'https://github.com/cconlan26'
   },
   {
     type: 'fas',
-    icon: 'envelope-square'
+    icon: 'envelope-square',
+    url: 'mailto:cconlan26@gmail.com'
   }
 ]
 
@@ -72,7 +76,7 @@ export const NavBar = () => {
     		{HEADERS.map((header, index) => <a key={index} href={header.url}>{header.text}</a>)}
       </div>
       <ul className={`${st.NavIcons}`}>
-        {ICONS.map((i, index) => <li key={index}><FontAwesomeIcon  icon={[i.type, i.icon]}/></li>)}
+        {ICONS.map((i, index) => <li key={index} id='navIcon'><a href={i.url} target='_blank'><FontAwesomeIcon icon={[i.type, i.icon]}/></a></li>)}
       </ul>
     </div>
   )

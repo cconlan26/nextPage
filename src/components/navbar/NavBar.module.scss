@@ -1,5 +1,10 @@
 $primary: #37ca7e;
 $secondary: #43a6dd;
+
+
+$primary-scrolled: #a0fdcd;
+$secondary-scrolled: #8dd5ff;
+
 $transitionSpeed: 1s;
 
 
@@ -14,6 +19,8 @@ $transitionSpeed: 1s;
 	font-size: 20px;
 	top: 0;
 
+	z-index: 2;
+
 	position: sticky;
   position: -webkit-sticky;
 
@@ -23,12 +30,20 @@ $transitionSpeed: 1s;
 
 	a {
 		background: linear-gradient(to bottom, $primary 0%, $secondary 100%);
+		padding: 4px;
 		background-position: 0 100%;
 		background-repeat: repeat-x;
 		background-size: 4px 2px;
 	  color: #fff;
 	  text-decoration: none;
 	  transition: background-size .2s;
+	}
+
+	[id='navIcon'] {
+		a:hover {
+			color: rgba(#fff, 0.5);
+			transition: color .4s;
+		}
 	}
 
 	a:link {
@@ -93,6 +108,18 @@ $transitionSpeed: 1s;
 		text-decoration: none;
 		color: #6b6b6b;
 		border-bottom: 2px solid transparent;
+		background: linear-gradient(to bottom, $primary-scrolled 0%, $secondary-scrolled 100%);
+		background-position: 0 100%;
+		background-repeat: repeat-x;
+		background-size: 4px 2px;
+	  transition: background-size .2s;
+	}
+
+	[id='navIcon'] {
+		a:hover {
+			color: rgba(#000, 0.8);
+			transition: color .4s;
+		}
 	}
 
 	li {
@@ -149,6 +176,10 @@ $transitionSpeed: 1s;
 	position: relative;
 	font-size: 25px;
 	padding: 0;
+
+	a {
+		background: none;
+	}
 
 		/* Mobile Styles */
 	@media only screen and (max-width: 400px) {

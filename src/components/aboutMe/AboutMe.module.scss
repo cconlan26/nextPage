@@ -4,54 +4,23 @@
   display: -webkit-flex;     // NEW - Chrome
   display: flex;             // NEW, Spec - Opera 12.1, Firefox 20
 	flex-direction: column;
-	width: 40vw;
+	width: 50vw;
 	padding-top: 10vh;
 }
 
 .Title {
-	padding: 5vh 0;
+	padding: 3vh 0;
+
+	h1 {
+		display: inline-block;
+		border: 4px solid;
+		padding: 4px;
+	}
 }
 
 .Content {
 	//color: white;
 }
-
-@keyframes right {
-  100% {
-    transform: translateX(0%);
-    color: #6b6b6b;
-  }
-}
-
-@keyframes left {
-  100% {
-    transform: translateX(-115%);
-    color: #6b6b6b;
-  }
-}
-
-.Experience {
-	padding-bottom: 10vh;
-	visibility: visible;
-	animation: left 2s;
-	animation-delay: 0.2s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-}
-
-.ExperienceScrolled {
-	animation: right 2s;
-	animation-delay: 0.2s;
-	animation-fill-mode: forwards;
-	animation-timing-function: cubic-bezier(0.075, 0.82, 0.165, 1);
-	transform: translateX(-115%);
-	visibility: visible;
-}
-
-.Invisible {
-	visibility: hidden;
-}
-
 
 
 .WithDate {
@@ -64,4 +33,24 @@
 	h2 {
 		padding-right: 1vw;
 	}
+}
+
+.FadeInSection {
+  
+  opacity: 0;
+  transform: translate(0, 50%);
+  visibility: hidden;
+  transition: opacity 300ms ease-out, transform 400ms ease-out;
+  will-change: opacity, visibility;
+}
+
+.isVisible {
+  opacity: 1;
+  transform: none;
+  visibility: visible;
+  display: flex; 
+}
+
+.ExperienceEntry {
+	padding: 5vh 0;
 }
